@@ -6,7 +6,7 @@
           templateUrl: "common/views/welcome.html",
           controller: 'InstaCtrl as insta'
         })
-        .when('/', {
+        .when('/discover', {
           templateUrl: "common/views/discover.html",
           controller: 'InstaCtrl as insta'
         })
