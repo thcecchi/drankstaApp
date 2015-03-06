@@ -8,7 +8,7 @@
         })
         .when('/', {
           templateUrl: "common/views/discover.html",
-          controller: 'InstaCtrl as insta'
+          controller: 'GoogleCtrl as google'
         })
         .when('/', {
           templateUrl: "common/views/detail.html",
