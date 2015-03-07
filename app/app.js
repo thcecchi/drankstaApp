@@ -1,17 +1,20 @@
 (function(app) {
-  angular.module("dranksta", [
-    'ngRoute',
-    'comment'
-    ])
-    .config(function ($routeProvider) {
+    
+    app.config(function ($routeProvider) {
       $routeProvider
         .when('/', {
           templateUrl: "common/views/welcome.html",
+
           //controller: 'InstaCtrl as insta'
+          controller: 'GoogleCtrl as google'
         })
-        .when('/', {
+        .when('/discover', {
           templateUrl: "common/views/discover.html",
           //controller: 'InstaCtrl as insta'
+        })
+        .when('/map', {
+          templateUrl:"common/views/map.html",
+          controller: "GoogleCtrl as google"
         })
         .when('/detail', {
           templateUrl: "common/views/detail.html",
@@ -26,8 +29,22 @@
         });
     });
 
-    // app.run(function () {});
-    //
-    // app.controller('AppController', function ($scope) {
+    app.run(function () {});
+    
+    app.controller('AppController', function ($scope) {
 
-    })();
+
+    });
+
+    app.controller('AppController', function ($scope) {
+
+    });
+
+}(angular.module("dranksta", [
+      'ngRoute',
+      'comment',
+      'ngAutocomplete',
+      'uiGmapgoogle-maps'
+    
+])));
+
