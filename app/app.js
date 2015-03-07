@@ -5,12 +5,12 @@
         .when('/', {
           templateUrl: "common/views/welcome.html",
 
-          //controller: 'InstaCtrl as insta'
+          controller: 'InstaCtrl as insta'
           controller: 'GoogleCtrl as google'
         })
         .when('/discover', {
           templateUrl: "common/views/discover.html",
-          //controller: 'InstaCtrl as insta'
+          controller: 'InstaCtrl as insta'
         })
         .when('/map', {
           templateUrl:"common/views/map.html",
