@@ -4,6 +4,17 @@
     .controller("GoogleCtrl", function (GoogleService, $scope, $location, $routeParams) {
       var google = this;
 
+      google.locationInput = function (newLocation) {
+        var locName = newLocation
+        console.log(locName)
+        GoogleService.getBarInfo(locName)
+
+        // console.log(data)
+      }
+
+// test markers
+////////////////////
+
       $scope.map = {
         center: {
           latitude: 45,
@@ -65,8 +76,11 @@
         console.log(data)
       }
 
-
   });
 
 
 })();
+
+// GoogleService.getBarInfo(locName).success(function(data){
+//   google.allBars = data;
+// })
