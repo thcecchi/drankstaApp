@@ -10,6 +10,10 @@
           templateUrl: "common/views/discover.html",
           controller: 'InstaCtrl as insta'
         })
+        .when('/map', {
+          templateUrl:"common/views/map.html",
+          controller: "GoogleCtrl as google"
+        })
         .when('/detail', {
           templateUrl: "common/views/detail.html",
           controller: 'GoogleCtrl as google'
@@ -30,5 +34,6 @@
 
 }(angular.module("dranksta", [
     'ngRoute',
-    'ngAutocomplete'
+    'ngAutocomplete',
+    'uiGmapgoogle-maps'
 ])));
