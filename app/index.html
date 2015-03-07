@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <title>dranksta</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -19,7 +21,21 @@
 
   </head>
   <body ng-app="dranksta">
-
+    <header>
+    <h1>DRANKSTA</h1><img class="chugefresh"src="chugefresh.gif" alt="">
+  </header>
+  <nav>
+    <ul class="col-sm-12 col-md-12 col-lg-12">
+      <li class="col-sm-3 col-md-3 col-lg-3">
+        <a href=""><h3>SEARCH</h3></a></li>
+      <li class="col-sm-3 col-md-3 col-lg-3">
+        <a href="#/detail"><h3>DETAILS</h3></a></li>
+      <li class="col-sm-3 col-md-3 col-lg-3">
+        <a href=""><h3>MAP</h3></a></li>
+      <li class="col-sm-3 col-md-3 col-lg-3">
+        <a href=""><h3>PICS</h3></a></li>
+    </ul>
+  </nav>
 
     <ng-view></ng-view>
 

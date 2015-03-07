@@ -10,7 +10,7 @@
           templateUrl: "common/views/discover.html",
           controller: 'InstaCtrl as insta'
         })
-        .when('/', {
+        .when('/detail', {
           templateUrl: "common/views/detail.html",
           controller: 'GoogleCtrl as google'
         })

@@ -1,27 +1,22 @@
-$font: 'IM Fell English SC', serif;
-// Custom Styles
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
-}
-h1 {
-  font-family: $font;
-  color: blue;
-  text-align: center;
+  color: #333; }
 
-}
+h1 {
+  font-family: "IM Fell English SC", serif;
+  color: blue;
+  text-align: center; }
+
 .chugefresh {
-  height: 75px;
-}
+  height: 75px; }
 
 ul li {
-  font-family: $font;
-  display: inline-block;
-  a{
-    text-decoration: none;
-  }
-}
+  font-family: "IM Fell English SC", serif;
+  display: inline-block; }
+  ul li a {
+    text-decoration: none; }
+
 .hero-unit {
   margin: 50px auto 0 auto;
   width: 600px;
@@ -30,16 +25,15 @@ ul li {
   line-height: 30px;
   background-color: #eee;
   border-radius: 6px;
-  padding: 60px;
-  h1 {
+  padding: 60px; }
+  .hero-unit h1 {
     font-size: 60px;
     line-height: 1;
-    letter-spacing: -1px;
-  }
-}
+    letter-spacing: -1px; }
 
 .hero {
   display: inline-block;
   /* width: 25%; */
-  vertical-align: top;
-}
+  vertical-align: top; }
+
+/*# sourceMappingURL=main.css.map */
