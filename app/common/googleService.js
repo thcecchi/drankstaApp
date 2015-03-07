@@ -5,12 +5,12 @@
     .factory('GoogleService', function ($http, $rootScope, $log) {
 
 
-      var googleInfo = {
-        // urlA: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=bars+in+',
-        urlA: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=bar&key=AIzaSyD7V33_45D7vdPHFNKEasnNYXvr16P1Li4',
-
-        urlB: '&key=AIzaSyD7V33_45D7vdPHFNKEasnNYXvr16P1Li4',
-      }
+      // var googleInfo = {
+      //   // urlA: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=bars+in+',
+      //   urlA: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=bar&key=AIzaSyD7V33_45D7vdPHFNKEasnNYXvr16P1Li4',
+      //
+      //   urlB: '&key=AIzaSyD7V33_45D7vdPHFNKEasnNYXvr16P1Li4',
+      // }
       //
       // var getGoogleInfo = function (locName) {
       // // return $http.jsonp(googleInfo.urlA + locName + googleInfo.urlB);
