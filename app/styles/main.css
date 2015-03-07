@@ -1,3 +1,4 @@
+
 .angular-google-map-container {
   height: 400px; }
 
@@ -5,6 +6,21 @@ body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333; }
+
+h1 {
+  font-family: "IM Fell English SC", serif;
+  color: blue;
+  text-align: center; }
+
+.chugefresh {
+  height: 75px; }
+
+ul li {
+  font-family: "IM Fell English SC", serif;
+  display: inline-block; }
+  ul li a {
+    text-decoration: none; }
+
 
 .hero-unit {
   margin: 50px auto 0 auto;
@@ -24,3 +40,7 @@ body {
   display: inline-block;
   /* width: 25%; */
   vertical-align: top; }
+
+
+/*# sourceMappingURL=main.css.map */
+

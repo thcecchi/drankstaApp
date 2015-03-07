@@ -77,6 +77,8 @@
       }
 
   });
+
+
 })();
 
 // GoogleService.getBarInfo(locName).success(function(data){
