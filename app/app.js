@@ -1,19 +1,23 @@
 (function(app) {
-
-    app.config(function ($routeProvider) {
+  angular.module("dranksta", [
+    'ngRoute',
+    'comment'
+    ])
+    .config(function ($routeProvider) {
       $routeProvider
         .when('/', {
           templateUrl: "common/views/welcome.html",
-          controller: 'InstaCtrl as insta'
+          //controller: 'InstaCtrl as insta'
         })
         .when('/', {
           templateUrl: "common/views/discover.html",
-          controller: 'InstaCtrl as insta'
+          //controller: 'InstaCtrl as insta'
         })
         .when('/detail', {
           templateUrl: "common/views/detail.html",
-          controller: 'GoogleCtrl as google'
+          controller: 'CommentCtrl as comCtrl'
         })
+
         .when('/not-found', {
           templateUrl: "common/views/not-found.html"
         })
@@ -22,12 +26,8 @@
         });
     });
 
-    app.run(function () {});
+    // app.run(function () {});
+    //
+    // app.controller('AppController', function ($scope) {
 
-    app.controller('AppController', function ($scope) {
-
-    });
-
-}(angular.module("dranksta", [
-    'ngRoute',
-])));
+    })();
