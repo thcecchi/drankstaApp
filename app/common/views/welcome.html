@@ -1,6 +1,10 @@
 <h1>Dranksta!</h1>
 
-<form ng-submit='googleCtrl.addLocation(newLocation)' action="">
-    <input type="text" name="locName" value="locName" ng-model='newLocation.name' placeholder="name">
-    <button type="submit">Show Me Bars!</button>
+<form ng-submit='google.locationInput(newLocation)' action="">
+    <input type="text" name="locName" value="locName" ng-model='newLocation' placeholder="name">
+    <button type="submit">this</button>
   </form>
+  <a href="#/discover">Show Me Bars!</a>
+
+  <div id='main'></div>
+  <div id='map'></div>

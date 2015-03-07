@@ -5,14 +5,16 @@
       var google = this;
 
       google.locationInput = function (newLocation) {
-        newLocation.name = locName
-        GoogleService.getBarInfo(locName).success(function(data){
-          google.allBars = data;
-        })
+        var locName = newLocation
+        console.log(locName)
+        GoogleService.getBarInfo(locName)
 
-        console.log(data)
+        // console.log(data)
       }
-
 
   });
 })();
+
+// GoogleService.getBarInfo(locName).success(function(data){
+//   google.allBars = data;
+// })
