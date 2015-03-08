@@ -16,10 +16,12 @@
         CommentService.getOneComment(review);
       };
 
-      comCtrl.addReview = function (newReview) {
+      comCtrl.addReview = function (newReview, barName) {
+        newReview.name = barName;
         CommentService.addComment(newReview)
         console.log(newReview);
-        $location.path('/detail');
+
+        //$location.path('/detail');
 
       };
     });

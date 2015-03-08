@@ -10,14 +10,14 @@ body {
 
 h1 {
   text-align: center;
-  font-family: "IM Fell English SC", serif;
+  font-family: "UnifrakturMaguntia", serif;
   background: -webkit-linear-gradient(#eee, #ddbf00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block; }
 
 a {
-  font-family: "IM Fell English SC", serif;
+  font-family: "UnifrakturMaguntia", serif;
   color: #e2e3df; }
   a:hover {
     color: #DDBF00; }
@@ -26,11 +26,12 @@ img {
   display: inline-block; }
 
 input {
+  color: #333333;
   height: 100px; }
 
 button {
   height: 100px;
-  font-family: "IM Fell English SC", serif;
+  font-family: "UnifrakturMaguntia", serif;
   color: #333333; }
 
 .chugefresh {
@@ -38,7 +39,7 @@ button {
   height: 150px; }
 
 ul li {
-  font-family: "IM Fell English SC", serif;
+  font-family: "UnifrakturMaguntia", serif;
   display: inline-block; }
   ul li a {
     text-decoration: none; }

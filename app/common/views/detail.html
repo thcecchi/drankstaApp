@@ -4,22 +4,21 @@
   <a href="">MAP</a>
 
 <div class="col-sm-12 info">
-
+  <p><h1>{{google.getSingleBar.name}}</h1></p>
+  <p>{{google.getSingleBar.formatted_address}}</p>
 </div>
-<div class="comments col-sm-12">
+<div class="comments col-sm-12" ng-controller="CommentCtrl as comCtrl">
   <ul class="col-md-6">
     <li>
       <button ng-click="review = !review"><h3><i class="fa fa-beer"></i>add review</h3></button>
-      <form ng-submit="comCtrl.addReview(newReview)" ng-show="review" ng-app="comment" ng-controller="CommentCtrl as comCtrl">
-        <input value="Bubba's Pub"></input> <!-- will need to be google bar name -->
-        <input value="123 BBQ Lane, Hicksville, SC"></input>
+      <form ng-submit="comCtrl.addReview(newReview, google.getSingleBar.name)" ng-show="review" ng-app="comment" ng-controller="CommentCtrl as comCtrl">
         <textarea ng-model="newReview.comment" id="" cols="30" rows="10" size="300"></textarea>
         <select name="Rating" ng-model="newReview.rating"id="">
-          <option value= 1><h3>1</h3></option>
-          <option value= 2><h3>2</h3></option>
-          <option value= 3><h3>3</h3></option>
-          <option value= 4><h3>4</h3></option>
-          <option value= 5><h3>5</h3></option>
+          <option type="number" 1><h3>1</h3></option>
+          <option type="number" 2><h3>2</h3></option>
+          <option type="number" 3><h3>3</h3></option>
+          <option type="number" 4><h3>4</h3></option>
+          <option type="number" 5><h3>5</h3></option>
         </select>
         <select class="form-control" ng-model="newReview.category" name="Category" id="">
           <option value="Swanky"><h3>Swanky</h3></option>
@@ -30,7 +29,7 @@
         <button type="submit">Submit</button>
         </form>
      </li>
-     <li ng-repeat="review in comCtrl.comments">
+     <li ng-repeat="review in comCtrl.comments | filter: {name: google.getSingleBar.name} : true">
        <p><h4>{{review.name}}</h4></p>
        <p><h4>{{review.address}}</h4></p>
        <p><h4>{{review.comment}}</h4></p>
