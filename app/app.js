@@ -4,7 +4,7 @@
       $routeProvider
         .when('/', {
           templateUrl: "common/views/welcome.html",
-          controller: 'GoogleCtrl'
+          controller: 'GoogleCtrl as google'
         })
         .when('/discover', {
           templateUrl: "common/views/discover.html",
