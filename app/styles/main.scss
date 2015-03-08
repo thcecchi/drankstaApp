@@ -4,7 +4,15 @@ $dkgrey: #333333;
 $grey: #ccc;
 $ltgrey: #e2e3df;
 $beer: #DDBF00;
-$font: 'UnifrakturMaguntia', serif;
+
+@font-face {
+  font-family: 'oldLondon';
+  src: url(../OldLondon.ttf);
+}
+
+$font: 'oldLondon', serif;
+
+
 
 
 .angular-google-map-container {
