@@ -14,9 +14,9 @@
           templateUrl:"common/views/map.html",
           controller: "GoogleCtrl as google"
         })
-        .when('/detail', {
+        .when('/detail/:barIndex', {
           templateUrl: "common/views/detail.html",
-          controller: 'CommentCtrl as comCtrl'
+          controller: 'GoogleCtrl as google'
         })
 
         .when('/not-found', {
