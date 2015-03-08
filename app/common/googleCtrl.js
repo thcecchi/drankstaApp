@@ -2,15 +2,20 @@
   "use strict";
   angular.module("dranksta")
     .controller("GoogleCtrl", function (GoogleService, $scope, $location, $routeParams) {
-      var google = this;
+      var goog = this;
 
-      google.locationInput = function (newLocation) {
+      goog.allBars = GoogleService.getAllBarz();
+
+      goog.getSingleBar = GoogleService.getOneBar($routeParams.barId);
+
+
+      goog.locationInput = function (newLocation) {
         var locName = newLocation
         console.log(locName)
         GoogleService.getBarInfo(locName)
-
-        // console.log(data)
       }
+
+
 
 // test markers
 ////////////////////
@@ -67,18 +72,19 @@
         },
       ];
 
-      google.locationInput = function (newLocation) {
-        newLocation.name = locName
-        GoogleService.getBarInfo(locName).success(function(data){
-          google.allBars = data;
-        })
+// //////////////////////////
+// var SearchForm = function($scope){
+//             $scope.location = '';
+//
+//             $scope.doSearch = function(){
+//                 if($scope.location === ''){
+//                     alert('Directive did not update the location property in parent controller.');
+//                 } else {
+//                     alert('Yay. Location: ' + $scope.location);
+//                 }
+//             };
+//         }
 
-        console.log(data)
-      }
-
+// //////////////////////////
   });
 })();
-
-// GoogleService.getBarInfo(locName).success(function(data){
-//   google.allBars = data;
-// })

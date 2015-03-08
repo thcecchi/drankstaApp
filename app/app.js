@@ -14,7 +14,7 @@
           templateUrl:"common/views/map.html",
           controller: "GoogleCtrl as google"
         })
-        .when('/detail', {
+        .when('/detail/:barId', {
           templateUrl: "common/views/detail.html",
           controller: 'GoogleCtrl as google'
         })

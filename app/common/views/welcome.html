@@ -5,13 +5,22 @@
     <input type="text" name="locName" value="locName" ng-model='newLocation' placeholder="name">
     <button type="submit">this</button>
   </form>
-  <a href="#/discover">Show Me Bars!</a>
 
   <div id='main'></div>
   <div id='map'></div>
+
 <!-- //// -->
 <!-- google autocomplete -->
-<form ng-submit='googleCtrl.addLocation(newLocation)' action="">
+<!-- <form ng-submit='googleCtrl.addLocation(newLocation)' action="">
   <input type="text"  ng-autocomplete ng-model="autocomplete" options="options" details="details" name="locName"/>
   <button type="submit">Show Me Bars!</button>
- </form>
+ </form> -->
+<div class="InstaControl" ng-controller="InstaController as insta">
+ <div class="barz"  ng-repeat="bars in google.allBars">
+   <p>{{bars.name}}</p>
+   <div ng-repeat="p in pics">
+			<a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" /></a>
+		</div>
+   <p>Address: {{bars.formatted_address}} </p>
+ </div>
+</div>
