@@ -24,15 +24,24 @@
       var placeArr = []
 
       var getGoogleInfo = function initialize(locName) {
-        var locationName = new google.maps.LatLng(locName);
+
+        var coordinate=(locName).split(',');
+        var latlng = new google.maps.LatLng(coordinate[0],coordinate[1]);
+        console.log(latlng);
+
+
+        // parseInt(locName)
+        // console.log(locName)
+        // var locationName = new google.maps.LatLng(locName);
+        // console.log(locationName)
 
         map = new google.maps.Map(document.getElementById('map'), {
-            center: locationName,
+            center: latlng,
             zoom: 15
           });
 
         var request = {
-          location: locationName,
+          location: latlng,
           radius: '500',
           query: 'bar'
         };
