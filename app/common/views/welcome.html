@@ -1,8 +1,7 @@
-<h1>Dranksta!</h1>
 
 <!-- google maps places api -->
 <form ng-submit='google.locationInput(newLocation)' action="">
-    <input type="text" name="locName" value="locName" ng-model='newLocation' placeholder="name">
+    <input class="col-sm-8"type="text" name="locName" value="locName" ng-model='newLocation' placeholder="name">
     <button type="submit">this</button>
   </form>
   <a href="#/discover">Show Me Bars!</a>
@@ -12,6 +11,6 @@
 <!-- //// -->
 <!-- google autocomplete -->
 <form ng-submit='googleCtrl.addLocation(newLocation)' action="">
-  <input type="text"  ng-autocomplete ng-model="autocomplete" options="options" details="details" name="locName"/>
-  <button type="submit">Show Me Bars!</button>
+  <input class="col-sm-8"type="text" ng-autocomplete ng-model="autocomplete" options="options" details="details" name="locName"/>
+  <button type="submit" class="col-sm-6">Show Me Bars!</button>
  </form>

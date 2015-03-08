@@ -1,27 +1,55 @@
-
+$white: #fffefc;
+$lime: #caf200;
+$dkgrey: #333333;
+$grey: #ccc;
+$ltgrey: #e2e3df;
+$beer: #DDBF00;
 $font: 'IM Fell English SC', serif;
-
 
 
 .angular-google-map-container {
   height: 400px;
+  border: 1px solid $dkgrey;
   
 }
 
 // Custom Styles
 body {
-  background: #fafafa;
+  background: $dkgrey;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: $ltgrey;
+  margin: 0 0 0 30%;
 }
 h1 {
-  font-family: $font;
-  color: blue;
   text-align: center;
+  font-family: $font;
+  background: -webkit-linear-gradient(#eee, #ddbf00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+a {
+  font-family: $font;
+  color: $ltgrey;
+  &:hover {
+    color: $beer;
+  }
+}
+img{
+  display: inline-block;
+}
+input {
+  height: 100px;
+}
+button {
+height: 100px;
+font-family: $font;
+color: $dkgrey;
 
 }
 .chugefresh {
-  height: 75px;
+  display: inline-block;
+  height: 150px;
 }
 
 ul li {
@@ -30,6 +58,9 @@ ul li {
   a{
     text-decoration: none;
   }
+}
+.fa-beer {
+  color: $beer;
 }
 .hero-unit {
   margin: 50px auto 0 auto;

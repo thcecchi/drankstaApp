@@ -1,19 +1,41 @@
-
 .angular-google-map-container {
-  height: 400px; }
+  height: 400px;
+  border: 1px solid #333333; }
 
 body {
-  background: #fafafa;
+  background: #333333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333; }
+  color: #e2e3df;
+  margin: 0 0 0 30%; }
 
 h1 {
+  text-align: center;
   font-family: "IM Fell English SC", serif;
-  color: blue;
-  text-align: center; }
+  background: -webkit-linear-gradient(#eee, #ddbf00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; }
+
+a {
+  font-family: "IM Fell English SC", serif;
+  color: #e2e3df; }
+  a:hover {
+    color: #DDBF00; }
+
+img {
+  display: inline-block; }
+
+input {
+  height: 100px; }
+
+button {
+  height: 100px;
+  font-family: "IM Fell English SC", serif;
+  color: #333333; }
 
 .chugefresh {
-  height: 75px; }
+  display: inline-block;
+  height: 150px; }
 
 ul li {
   font-family: "IM Fell English SC", serif;
@@ -21,6 +43,8 @@ ul li {
   ul li a {
     text-decoration: none; }
 
+.fa-beer {
+  color: #DDBF00; }
 
 .hero-unit {
   margin: 50px auto 0 auto;
@@ -41,6 +65,4 @@ ul li {
   /* width: 25%; */
   vertical-align: top; }
 
-
 /*# sourceMappingURL=main.css.map */
-
