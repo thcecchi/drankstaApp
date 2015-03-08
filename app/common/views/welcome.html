@@ -1,16 +1,20 @@
 
-<!-- google maps places api -->
-<form ng-submit='google.locationInput(newLocation)' action="">
-    <input class="col-sm-8"type="text" name="locName" value="locName" ng-model='newLocation' placeholder="name">
-    <button type="submit">this</button>
-  </form>
+
+
+
+
+    <!-- <input class="col-sm-8"type="text" name="locName" value="locName" ng-model='newLocation' placeholder="name">
+    <button type="submit">this</button> -->
+
+    <google-places location=location></google-places>
+    <button type="submit" ng-click="doSearch()" class="btn btn-large btn-primary">Search</button>
+
 
   <div id='main'></div>
   <div id='map'></div>
 
-<!-- //// -->
-<!-- google autocomplete -->
-<!-- <div class="InstaControl" ng-controller="InstaController as insta"> -->
+
+<!-- google api rendered results -->
  <div class="barz"  ng-repeat="bars in google.allBars">
   <a href="#detail/{{$index}}">
    <p>{{bars.name}}</p>
@@ -21,9 +25,3 @@
    <p>Address: {{bars.formatted_address}} </p>
  </a>
  </div>
-</div>
-
-<form ng-submit='googleCtrl.addLocation(newLocation)' action="">
-  <input class="col-sm-8"type="text" ng-autocomplete ng-model="autocomplete" options="options" details="details" name="locName"/>
-  <button type="submit" class="col-sm-6">Show Me Bars!</button>
- </form>

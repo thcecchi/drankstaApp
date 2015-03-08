@@ -4,8 +4,6 @@
       $routeProvider
         .when('/', {
           templateUrl: "common/views/welcome.html",
-
-          controller: 'InstaCtrl as insta',
           controller: 'GoogleCtrl as google'
         })
         .when('/discover', {
@@ -43,7 +41,6 @@
 }(angular.module("dranksta", [
       'ngRoute',
       'comment',
-      'ngAutocomplete',
       'uiGmapgoogle-maps'
 
 ])));
