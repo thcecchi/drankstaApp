@@ -41,6 +41,7 @@
 }(angular.module("dranksta", [
       'ngRoute',
       'comment',
-      'uiGmapgoogle-maps'
+      'uiGmapgoogle-maps',
+      'dcbImgFallback'
 
 ])));

@@ -1,7 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <google-places location=location></google-places>
+      <button type="submit" ng-click="doSearch()" id="searchBtn" class="btn btn-large btn-primary">Search</button>
+    </div>
+    <div class="col-md-4"></div>
 
-    <google-places location=location></google-places>
-    <button type="submit" ng-click="doSearch()" class="btn btn-large btn-primary">Search</button>
-
+  </div>
 
 
   <div id='main'></div>
@@ -9,10 +15,13 @@
 
 
 <!-- google api rendered results -->
+<div class="results">
  <div class="barz"  ng-repeat="bars in google.allBars">
   <a href="#detail/{{$index}}">
-   <p>{{bars.name}}</p>
-    <img ng-src="{{bars.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200})}}">
-   <p>Address: {{bars.formatted_address}} </p>
- </a>
+   <h3>{{bars.name}}</h3>
+
+    <img ng-src="{{bars.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200})}}" loading-src="../chugefresh.png">
+  </a>
  </div>
+</div>
+</div>
