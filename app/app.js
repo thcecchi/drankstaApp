@@ -1,5 +1,5 @@
 (function(app) {
-    
+
     app.config(function ($routeProvider) {
       $routeProvider
         .when('/', {
@@ -16,9 +16,9 @@
           templateUrl:"common/views/map.html",
           controller: "GoogleCtrl as google"
         })
-        .when('/detail/:barId', {
+        .when('/detail/:barIndex', {
           templateUrl: "common/views/detail.html",
-          controller: 'CommentCtrl as comCtrl'
+          controller: 'GoogleCtrl as google'
         })
 
         .when('/not-found', {
@@ -30,7 +30,7 @@
     });
 
     app.run(function () {});
-    
+
     app.controller('AppController', function ($scope) {
 
 
@@ -45,6 +45,5 @@
       'comment',
       'ngAutocomplete',
       'uiGmapgoogle-maps'
-    
-])));
 
+])));

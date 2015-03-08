@@ -69,10 +69,8 @@
 
       var readOneArr = function(index) {
         return placeArr[index]
+        console.log(placeArr[index])
       }
-
-
-
 
       return {
         getBarInfo: getGoogleInfo,

@@ -6,7 +6,7 @@
 
       goog.allBars = GoogleService.getAllBarz();
 
-      goog.getSingleBar = GoogleService.getOneBar($routeParams.barId);
+      goog.getSingleBar = GoogleService.getOneBar($routeParams.barIndex);
 
 
       goog.locationInput = function (newLocation) {
