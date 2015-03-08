@@ -1,25 +1,27 @@
 
-<!-- <h1>Dranksta!</h1>
 
 
-google maps places api
-<form ng-submit='google.locationInput(newLocation)' action="">
-    <input class="col-sm-8"type="text" name="locName" value="locName" ng-model='newLocation' placeholder="name">
-    <button type="submit">this</button>
-  </form>
-  <a href="#/discover">Show Me Bars!</a> -->
+
+
+    <!-- <input class="col-sm-8"type="text" name="locName" value="locName" ng-model='newLocation' placeholder="name">
+    <button type="submit">this</button> -->
+
+    <google-places location=location></google-places>
+    <button type="submit" ng-click="doSearch()" class="btn btn-large btn-primary">Search</button>
+
 
   <div id='main'></div>
   <div id='map'></div>
-<!-- //// -->
-<!-- google autocomplete -->
 
-<div ng-controller="GoogleCtrl as google">
-<google-places location=location></google-places>
-    <button ng-click="doSearch()" class="btn btn-large btn-primary">Search</button>
+
+<!-- google api rendered results -->
+ <div class="barz"  ng-repeat="bars in google.allBars">
+  <a href="#detail/{{$index}}">
+   <p>{{bars.name}}</p>
+   <!-- <div ng-repeat="p in pics">
+			<a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" /></a>
+		</div> -->
+    <img ng-src="{{bars.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200})}}">
+   <p>Address: {{bars.formatted_address}} </p>
+ </a>
  </div>
-
-<!-- <form ng-submit='googleCtrl.addLocation(newLocation)' action="">
-  <input class="col-sm-8"type="text" ng-autocomplete ng-model="autocomplete" options="options" details="details" name="locName"/>
-  <button type="submit" class="col-sm-6">Show Me Bars!</button>
- </form> -->

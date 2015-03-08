@@ -1,24 +1,18 @@
-
 (function () {
-  'use strict';
-
+  "use strict";
   angular.module('dranksta')
-    .factory('InstaService', function () {
-      //
-      // var igInfo = {
-      //       urlA: 'api.instagram.com/v1/tags/',
-      //       urlB: '/media/recent?client_id=af685a58c5b14d56bc3398d5d8e356ad',
-      // 	    // secret: '52f98117baa64118adbf6a9637376c04'
-      //       locationTag:
-      //     };
+    .factory('InstaService', ['$http', function ($http) {
 
-      var getPics = function () {
-        return $http.get(urlA + locName + urlB);
-    };
 
       return {
-        getBarPics: getPics
-      }
-    });
+        fetchPopular: function (callback){
+          var endPoint = "https://api.instagram.com/v1/media/popular?client_id=642176ece1e7445e99244cec26f4de1f&callback=JSON_CALLBACK&count=1";
 
-})();
+        $http.jsonp(endPoint).success(function(response){
+          callback(response.data);
+        });
+      }
+    }
+  }
+])
+})();;
