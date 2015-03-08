@@ -37,12 +37,6 @@ img {
   border-radius: 5px;
   border: 3px solid #DDBF00; }
 
-/* button {
-height: 50px;
-font-family: $font;
-color: $dkgrey;
-
-} */
 #searchBtn {
   height: 50px;
   font-family: "avenir", serif;
@@ -99,8 +93,6 @@ h3 {
 
 .barz {
   width: 27%;
-  /*   border: 5px double $beer;
-   */
   border-radius: 10px;
   box-shadow: 9px 7px 12px -5px rgba(0, 0, 0, 0.6);
   padding: 35px;
