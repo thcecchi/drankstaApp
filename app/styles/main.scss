@@ -4,13 +4,22 @@ $dkgrey: #333333;
 $grey: #ccc;
 $ltgrey: #e2e3df;
 $beer: #DDBF00;
-$font: 'IM Fell English SC', serif;
+$pfont: "futura-pt", sans-serif;
+
+@font-face {
+  font-family: 'oldLondon';
+  src: url(../OldLondon.ttf);
+}
+
+$font: 'oldLondon', serif;
+
+
 
 
 .angular-google-map-container {
   height: 400px;
   border: 1px solid $dkgrey;
-  
+
 }
 
 // Custom Styles
