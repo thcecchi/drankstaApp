@@ -6,14 +6,19 @@ $ltgrey: #e2e3df;
 $beer: #DDBF00;
 $pfont: "futura-pt", sans-serif;
 
-@font-face {
+/* @font-face {
   font-family: 'oldLondon';
   src: url(../OldLondon.ttf);
+} */
+
+$font: 'avenir', serif;
+
+@mixin transition($transition) {
+  transition: $transition;
+  -webkit-transition: $transition;
+  -o-transition:$transition;
+  -moz-transition:$transition;
 }
-
-$font: 'oldLondon', serif;
-
-
 
 
 .angular-google-map-container {
@@ -27,11 +32,11 @@ body {
   background: $dkgrey;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: $ltgrey;
-  margin: 0 0 0 30%;
 }
 h1 {
-  text-align: center;
-  font-family: $font;
+text-align: center;
+font-family: $font;
+  font-size: 3.5em;
   background: -webkit-linear-gradient(#eee, #ddbf00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -46,20 +51,40 @@ a {
 }
 img{
   display: inline-block;
+  width: 200px;
+  height: 200px;
 }
-input {
-  height: 100px;
-}
-button {
-height: 100px;
+#google_places_ac {
+  height: 50px;
+  background-color: $dkgrey;
+  border-radius: 5px;
+  border: 3px solid $beer;
+ }
+/* button {
+height: 50px;
 font-family: $font;
 color: $dkgrey;
 
+} */
+
+#searchBtn {
+  height: 50px;
+  font-family: $font;
+  background-color: $beer;
+  border: 3px solid $beer;
+  &:hover {
+  background-color: $dkgrey;
+  @include transition(all .3s ease);
+  color: white;
+
+  }
 }
 .chugefresh {
   display: inline-block;
   height: 150px;
+  width: 150px;
 }
+
 
 ul li {
   font-family: $font;
@@ -91,4 +116,25 @@ ul li {
   display: inline-block;
   /* width: 25%; */
   vertical-align: top;
+}
+
+h3 {
+  font-family: $pfont;
+
+}
+
+.results {
+  display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.barz {
+  width: 27%;
+/*   border: 5px double $beer;
+ */  border-radius: 10px;
+ box-shadow: 9px 7px 12px -5px rgba(0,0,0, 0.6);
+ padding: 35px;
+  margin: 10px;
+  background: rgba(0, 0, 0, 0.1);
 }

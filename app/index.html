@@ -20,6 +20,8 @@ src="https://maps.googleapis.com/maps/api/js?v=3.0sensor=false&libraries=places&
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -29,23 +31,23 @@ src="https://maps.googleapis.com/maps/api/js?v=3.0sensor=false&libraries=places&
 
   </head>
   <body ng-app="dranksta">
-    <header>
-    <h1>DRANKSTA</h1><img class="chugefresh"src="chugefresh.png" alt="">
-  </header>
-  <nav>
-    <ul class="col-sm-8 col-md-8 col-lg-8">
-      <li class="col-sm-3 col-md-3 col-lg-3">
-        <a href=""><h3>SEARCH</h3></a></li>
-      <li class="col-sm-3 col-md-3 col-lg-3">
-        <a href="#/detail"><h3>DETAILS</h3></a></li>
-      <li class="col-sm-3 col-md-3 col-lg-3">
-        <a href=""><h3>PICS</h3></a></li>
-    </ul>
-  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <header>
+              <h1>spout.</h1><img class="chugefresh" src="chugefresh.png" alt="">
+        </header>
+      </div>
+      <div class="col-md-4"></div>
+
+    </div>
+
 
     <ng-view></ng-view>
 
-
+  </div>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
 
@@ -54,12 +56,14 @@ src="https://maps.googleapis.com/maps/api/js?v=3.0sensor=false&libraries=places&
     <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places&key=AIzaSyD7V33_45D7vdPHFNKEasnNYXvr16P1Li4"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/lodash/dist/lodash.js"></script>
     <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+    <script src="bower_components/angular-img-fallback-master/angular.dcb-img-fallback.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
