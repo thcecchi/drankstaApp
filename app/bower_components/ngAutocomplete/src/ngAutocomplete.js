@@ -85,6 +85,7 @@ angular.module( "ngAutocomplete", [])
         }
         google.maps.event.addListener(scope.gPlace, 'place_changed', function() {
           var result = scope.gPlace.getPlace();
+          // $scope.result = scope.gPlace.getPlace();
           if (result !== undefined) {
             if (result.address_components !== undefined) {
 
@@ -102,8 +103,13 @@ angular.module( "ngAutocomplete", [])
             }
           }
         })
+        // // THIS RETURNS RESULT/////////
+        // var returnResult = function() {
+        //   return $scope.result;
+        // };
+        // // ///////////////////////
 
-        //function to get retrieve the autocompletes first result using the AutocompleteService 
+        //function to get retrieve the autocompletes first result using the AutocompleteService
         var getPlace = function(result) {
           var autocompleteService = new google.maps.places.AutocompleteService();
           if (result.name.length > 0){
@@ -163,4 +169,9 @@ angular.module( "ngAutocomplete", [])
 
       }
     };
+
+
+
+
+
   });
