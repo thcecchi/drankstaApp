@@ -3,7 +3,7 @@
   angular.module('comment')
   .factory('CommentService', function($http, $rootScope, $routeParams) {
 
-    var url = 'http://tiy-fee-rest.herokuapp.com/collections/drankstacom';
+    var url = 'http://tiy-fee-rest.herokuapp.com/collections/drankstacomms';
 
     var getReviews = function () {
       console.log("getReviews triggered");
@@ -24,7 +24,8 @@
   return {
     getComments: getReviews,
     getOneComment: getOneReview,
-    addComment: addReview
+    addComment: addReview,
+    // getResults: caluculateTotal
   };
 
 
