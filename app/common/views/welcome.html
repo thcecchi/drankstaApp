@@ -15,11 +15,14 @@ google maps places api
 <!-- google autocomplete -->
 
 <div ng-controller="GoogleCtrl as google">
+	<form ng-submit='googleCtrl.addLocation(newLocation)' action="">
 <google-places location=location></google-places>
     <button ng-click="doSearch()" class="btn btn-large btn-primary">Search</button>
+     </form>
  </div>
 
 <!-- <form ng-submit='googleCtrl.addLocation(newLocation)' action="">
   <input class="col-sm-8"type="text" ng-autocomplete ng-model="autocomplete" options="options" details="details" name="locName"/>
   <button type="submit" class="col-sm-6">Show Me Bars!</button>
- </form> -->
+ </form>
+ -->
