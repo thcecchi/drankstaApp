@@ -10,7 +10,8 @@
       var placeArr = []
 
       var getGoogleInfo = function initialize(locName) {
-
+        var locationName = new google.maps.LatLng(locName);
+        console.log(locName);
         var coordinate=(locName).split(',');
         var latlng = new google.maps.LatLng(coordinate[0],coordinate[1]);
         console.log(latlng);
