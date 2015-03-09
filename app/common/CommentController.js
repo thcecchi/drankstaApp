@@ -29,21 +29,24 @@
         comCtrl.comments=data; //declares data as items returned from server
         var totalArr = []
         var catArr = []
-        console.log('is this being logged twice?') // ****getComments is being fired twice because the find search button is being pressed twice***
+        // ***getComments is being fired twice because the find search button is being pressed twice***
         data.forEach(function(obj) {
           var barNamez = $('.barName').text()
           console.log(barNamez)
           if(obj.name == barNamez) {
-            totalArr.push(obj.rating)
+            var ratingInt = parseInt(obj.rating)
+            totalArr.push(ratingInt)
             catArr.push(obj.category)
             console.log(totalArr)
             console.log(catArr)
           }
 
         })
-        total = totalArr.reduce(function(a, b) {
+        var total = totalArr.reduce(function(a, b) {
           return a + b;
         });
+
+        console.log(total)
 
         comCtrl.mode(catArr) // fire the find mode function
 
@@ -53,6 +56,7 @@
         var roundedAvg = Math.round(avg)
         $('.rating').append(roundedAvg)
       });
+
 
       CommentService.getOneComment($routeParams.itemId).success(function(data){
         comCtrl.singleReview = data; //data is result to pull one server object
