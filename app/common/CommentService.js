@@ -24,9 +24,8 @@
   return {
     getComments: getReviews,
     getOneComment: getOneReview,
-    addComment: addReview,
-    // getResults: caluculateTotal
-  };
+    addComment: addReview
+    };
 
 
   });

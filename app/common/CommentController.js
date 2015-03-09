@@ -29,6 +29,7 @@
         comCtrl.comments=data; //declares data as items returned from server
         var totalArr = []
         var catArr = []
+        console.log('is this being logged twice?') // ****getComments is being fired twice because the find search button is being pressed twice***
         data.forEach(function(obj) {
           var barNamez = $('.barName').text()
           console.log(barNamez)
@@ -44,12 +45,13 @@
           return a + b;
         });
 
-        comCtrl.mode(catArr)
+        comCtrl.mode(catArr) // fire the find mode function
 
         console.log(total)
         avg = total/totalArr.length
         console.log(avg)
-        $('.rating').append(avg)
+        var roundedAvg = Math.round(avg)
+        $('.rating').append(roundedAvg)
       });
 
       CommentService.getOneComment($routeParams.itemId).success(function(data){
