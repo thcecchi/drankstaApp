@@ -15,8 +15,9 @@
                     alert('Directive did not update the location property in parent controller.');
                 } else {
                     console.log($scope.location);
-                  var locCoords = parseInt($scope.location)
-                  console.log(locCoords);
+                    var locCoords = parseInt($scope.location)
+
+                    console.log(locCoords);
                     goog.locationInput($scope.location)
                 }
             };

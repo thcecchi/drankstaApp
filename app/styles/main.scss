@@ -84,6 +84,9 @@ margin-left: -67px;
   background-color: $dkgrey;
   @include transition(all .3s ease);
   color: white;
+  &:focus {
+  outline: none;
+}
 
   }
 }

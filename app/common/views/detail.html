@@ -3,11 +3,23 @@
   <span><a href="#/"><h2><i class="fa fa-chevron-left"></i>BACK</h2></a></span>
 
 <div class="col-sm-12 info">
-  <p><h1>{{google.getSingleBar.name}}</h1></p>
+  <p><h1 class="barName">{{google.getSingleBar.name}}</h1></p>
   <p>{{google.getSingleBar.formatted_address}}</p>
 </div>
+
+<div class="barStats">
+<ul>
+  <li class="rating">Rating: </li>
+  <li class="category">Category: </li>
+</ul>
+</div>
+
 <div class="comments col-sm-12" ng-controller="CommentCtrl as comCtrl">
+
+  <button ng-click="updateResults(google.getSingleBar.name)"></button>
+
   <button id="newComBtn" ng-click="review = !review"><h3><i class="fa fa-beer"></i>add review</h3></button>
+
   <ul class="col-md-6">
     <li>
       <form class="newComForm col-md-6" ng-submit="comCtrl.addReview(newReview, google.getSingleBar.name)" ng-show="review" ng-app="comment" ng-controller="CommentCtrl as comCtrl">
@@ -21,9 +33,9 @@
         </select>
         <select class="form-control" ng-model="newReview.category" name="Category" id="">
           <option value="Swanky"><h3>Swanky</h3></option>
-          <option value="Reasonable"><h3>Reasonable</h3></option>
-          <option value="Frat Bar"><h3>Frat Bar</h3></option>
-          <option value="Dive"><h3>It's a dive</h3></option>
+          <option value="Regular"><h3>Regular</h3></option>
+          <option value="Fratty"><h3>Fratty</h3></option>
+          <option value="Dive"><h3>Dive</h3></option>
         </select>
         <button type="submit" id="newComSubmit">Submit</button>
         </form>
