@@ -132,3 +132,54 @@ h3 {
   margin: 10px;
   background: rgba(0, 0, 0, 0.1);
 }
+
+
+
+
+
+.newComForm{
+  display: block;
+    input {
+      margin: 1% 0 0 0;
+      height: 75px;
+      background-color: $dkgrey;
+      border-radius: 5px;
+      border: 3px solid $beer;
+      word-break: break-all;
+  }
+}
+#newComBtn, {
+display: block;
+  height: 50px;
+  font-family: $font;
+  background-color: $beer;
+  border: 3px solid $beer;
+  border-radius: 5px;
+    &:hover {
+      background: $dkgrey;
+      @include transition(all .3s ease);
+      color: white;
+}}
+
+#newComSubmit {
+  display: block;
+  height: 50px;
+  font-family: $font;
+  background-color: $beer;
+  border: 3px solid $beer;
+  border-radius: 5px;
+    &:hover {
+      background: $dkgrey;
+      @include transition(all .3s ease);
+      color: white;
+}}
+
+.reviews{
+  border-radius: 10px;
+ box-shadow: 9px 7px 12px -5px rgba(0,0,0, 0.6);
+ padding: 35px;
+  margin: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  word-break: break-word;
+  
+}

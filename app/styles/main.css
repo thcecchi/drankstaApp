@@ -99,4 +99,52 @@ h3 {
   margin: 10px;
   background: rgba(0, 0, 0, 0.1); }
 
+.newComForm {
+  display: block; }
+  .newComForm input {
+    margin: 1% 0 0 0;
+    height: 75px;
+    background-color: #333333;
+    border-radius: 5px;
+    border: 3px solid #DDBF00;
+    word-break: break-all; }
+
+#newComBtn {
+  display: block;
+  height: 50px;
+  font-family: "avenir", serif;
+  background-color: #DDBF00;
+  border: 3px solid #DDBF00;
+  border-radius: 5px; }
+  #newComBtn:hover {
+    background: #333333;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    color: white; }
+
+#newComSubmit {
+  display: block;
+  height: 50px;
+  font-family: "avenir", serif;
+  background-color: #DDBF00;
+  border: 3px solid #DDBF00;
+  border-radius: 5px; }
+  #newComSubmit:hover {
+    background: #333333;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    color: white; }
+
+.reviews {
+  border-radius: 10px;
+  box-shadow: 9px 7px 12px -5px rgba(0, 0, 0, 0.6);
+  padding: 35px;
+  margin: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  word-break: break-word; }
+
 /*# sourceMappingURL=main.css.map */

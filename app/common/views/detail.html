@@ -7,11 +7,11 @@
   <p>{{google.getSingleBar.formatted_address}}</p>
 </div>
 <div class="comments col-sm-12" ng-controller="CommentCtrl as comCtrl">
+  <button id="newComBtn" ng-click="review = !review"><h3><i class="fa fa-beer"></i>add review</h3></button>
   <ul class="col-md-6">
     <li>
-      <button ng-click="review = !review"><h3><i class="fa fa-beer"></i>add review</h3></button>
-      <form ng-submit="comCtrl.addReview(newReview, google.getSingleBar.name)" ng-show="review" ng-app="comment" ng-controller="CommentCtrl as comCtrl">
-        <textarea ng-model="newReview.comment" id="" cols="30" rows="10" size="300"></textarea>
+      <form class="newComForm col-md-6" ng-submit="comCtrl.addReview(newReview, google.getSingleBar.name)" ng-show="review" ng-app="comment" ng-controller="CommentCtrl as comCtrl">
+        <input class="col-md-12" ng-model="newReview.comment" id="" size="300"></input>
         <select name="Rating" ng-model="newReview.rating"id="">
           <option type="number" 1><h3>1</h3></option>
           <option type="number" 2><h3>2</h3></option>
@@ -25,15 +25,14 @@
           <option value="Frat Bar"><h3>Frat Bar</h3></option>
           <option value="Dive"><h3>It's a dive</h3></option>
         </select>
-        <button type="submit">Submit</button>
+        <button type="submit" id="newComSubmit">Submit</button>
         </form>
      </li>
-     <li ng-repeat="review in comCtrl.comments | filter: {name: google.getSingleBar.name} : true">
-       <p><h4>{{review.name}}</h4></p>
-       <p><h4>{{review.address}}</h4></p>
-       <p><h4>{{review.comment}}</h4></p>
-       <p><h4>{{review.category}}</h4></p>
-       <p><h4>{{review.rating}}</h4></p>
+     <li class="reviews row col-sm-6" ng-repeat="review in comCtrl.comments | filter: {name: google.getSingleBar.name} : true">
+       <p class="barCommentz"><h3>" {{review.comment}} "</h3></p>
+       <p class="barCategories"><h4>Category:  {{review.category}}</h4></p>
+       <p class="barRating"><h4>Rating:  {{review.rating}}</h4></p>
+       <p class="barzName"><h3>{{review.name}}</h3></p>
      </li>
   </ul>
 </div>
