@@ -14,7 +14,7 @@ body {
 h1 {
   text-align: center;
   font-family: "avenir", serif;
-  font-size: 3.5em;
+  font-size: 4em;
   background: -webkit-linear-gradient(#eee, #ddbf00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -26,22 +26,33 @@ a {
   a:hover {
     color: #DDBF00; }
 
+header {
+  margin-bottom: 15px; }
+  header img {
+    vertical-align: bottom;
+    margin-left: -20px; }
+
 img {
   display: inline-block;
   width: 200px;
-  height: 200px; }
+  height: 200px;
+  border-radius: 5px;
+  margin: 0 0 0 -1px; }
 
 #google_places_ac {
   height: 50px;
   background-color: #333333;
   border-radius: 5px;
-  border: 3px solid #DDBF00; }
+  border: 3px solid #DDBF00;
+  width: 300px;
+  margin-left: -67px; }
 
 #searchBtn {
   height: 50px;
   font-family: "avenir", serif;
   background-color: #DDBF00;
-  border: 3px solid #DDBF00; }
+  border: 3px solid #DDBF00;
+  width: 100px; }
   #searchBtn:hover {
     background-color: #333333;
     transition: all 0.3s ease;
@@ -76,7 +87,8 @@ ul li {
   .hero-unit h1 {
     font-size: 60px;
     line-height: 1;
-    letter-spacing: -1px; }
+    letter-spacing: -1px;
+    margin-right: 5px; }
 
 .hero {
   display: inline-block;
@@ -84,18 +96,22 @@ ul li {
   vertical-align: top; }
 
 h3 {
-  font-family: "futura-pt", sans-serif; }
+  font-family: "futura-pt", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  margin-top: -26px 0 66px 0; }
 
 .results {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-top: 15px; }
 
 .barz {
   width: 27%;
   border-radius: 10px;
   box-shadow: 9px 7px 12px -5px rgba(0, 0, 0, 0.6);
-  padding: 35px;
+  padding: 60px;
   margin: 10px;
   background: rgba(0, 0, 0, 0.1); }
 
