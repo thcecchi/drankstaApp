@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-  angular.module("comment")
+  angular.module("dranksta")
     .controller("CommentCtrl", function (CommentService, $scope, $http, $location, $routeParams) {
       var comCtrl = this;
       var total = ''
@@ -27,26 +27,33 @@
 
       CommentService.getComments().success(function(data){
         comCtrl.comments=data; //declares data as items returned from server
+        console.log(data)
         var totalArr = []
         var catArr = []
-        // ***getComments is being fired twice because the find search button is being pressed twice***
+        console.log('is this being logged twice?')
+      //   $scope.getTheBars.forEach(function(obj) {
+      //   console.log(obj.name)
+      // })
         data.forEach(function(obj) {
           var barNamez = $('.barName').text()
           console.log(barNamez)
           if(obj.name == barNamez) {
-            var ratingInt = parseInt(obj.rating)
-            totalArr.push(ratingInt)
+            var num = parseInt(obj.rating)
+            totalArr.push(num)
             catArr.push(obj.category)
             console.log(totalArr)
             console.log(catArr)
           }
 
         })
-        var total = totalArr.reduce(function(a, b) {
-          return a + b;
-        });
 
-        console.log(total)
+        console.log(totalArr)
+        console.log(totalArr.length)
+        var total = totalArr.reduce(function(a, b) {
+
+          return a + b;
+
+        });
 
         comCtrl.mode(catArr) // fire the find mode function
 
@@ -57,10 +64,9 @@
         $('.rating').append(roundedAvg)
       });
 
-
-      CommentService.getOneComment($routeParams.itemId).success(function(data){
-        comCtrl.singleReview = data; //data is result to pull one server object
-      });
+      // CommentService.getOneComment($routeParams.itemId).success(function(data){
+      //   comCtrl.singleReview = data; //data is result to pull one server object
+      // });
 
       comCtrl.getOneReview = function (review) {
         CommentService.getOneComment(review);

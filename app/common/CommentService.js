@@ -1,6 +1,6 @@
 (function (){
   "use strict";
-  angular.module('comment')
+  angular.module('dranksta')
   .factory('CommentService', function($http, $rootScope, $routeParams) {
 
     var url = 'http://tiy-fee-rest.herokuapp.com/collections/drankstacomms';

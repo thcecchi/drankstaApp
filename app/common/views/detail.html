@@ -1,51 +1,59 @@
+<!-- <div class="google" ng-controller="GoogleCtrl as google"> -->
 
-<div>
-  <span><a href="#/"><h2><i class="fa fa-chevron-left"></i>BACK</h2></a></span>
+  <span><a href="#/"><h2 class="back"><i class="fa fa-chevron-left"></i>BACK</h2></a></span>
 
-<div class="col-sm-12 info">
-  <p><h1 class="barName">{{google.getSingleBar.name}}</h1></p>
-  <p>{{google.getSingleBar.formatted_address}}</p>
+
+<div class="row detail">
+  <div class="info col-sm-12 centered">
+    <h1 class="barName">{{google.getSingleBar.name}}</h1>
+    <p>{{google.getSingleBar.formatted_address}}</p>
+  </div>
 </div>
 
-<div class="barStats">
-<ul>
-  <li class="rating">Rating: </li>
-  <li class="category">Category: </li>
-</ul>
+<div class="row detail">
+  <div class="barStats col-md-6 centered">
+    <ul>
+      <li class="rating stat"><h3 class='ratingLine'>Rating: </h3></li>
+      <li class="category stat"><h3 class='ratingLine'>Category: </h3></li>
+    </ul>
+  </div>
 </div>
 
-<div class="comments col-sm-12" ng-controller="CommentCtrl as comCtrl">
+<div class="row detail">
+    <!-- <button ng-click="updateResults(google.getSingleBar.name)">update results (test)</button> -->
 
-  <!-- <button ng-click="updateResults(google.getSingleBar.name)"></button> -->
-
-  <button id="newComBtn" ng-click="review = !review"><h3><i class="fa fa-beer"></i>add review</h3></button>
-
-  <ul class="col-md-6">
-    <li>
-      <form class="newComForm col-md-6" ng-submit="comCtrl.addReview(newReview, google.getSingleBar.name)" ng-show="review" ng-app="comment" ng-controller="CommentCtrl as comCtrl">
-        <input class="col-md-12" ng-model="newReview.comment" id="" size="300"></input>
-        <select name="Rating" ng-model="newReview.rating"id="">
-          <option type="number" 1><h3>1</h3></option>
-          <option type="number" 2><h3>2</h3></option>
-          <option type="number" 3><h3>3</h3></option>
-          <option type="number" 4><h3>4</h3></option>
-          <option type="number" 5><h3>5</h3></option>
-        </select>
-        <select class="form-control" ng-model="newReview.category" name="Category" id="">
-          <option value="Swanky"><h3>Swanky</h3></option>
-          <option value="Regular"><h3>Regular</h3></option>
-          <option value="Fratty"><h3>Fratty</h3></option>
-          <option value="Dive"><h3>Dive</h3></option>
-        </select>
-        <button type="submit" id="newComSubmit">Submit</button>
-        </form>
-     </li>
-     <li class="reviews row col-sm-6" ng-repeat="review in comCtrl.comments | filter: {name: google.getSingleBar.name} : true">
-       <p class="barCommentz"><h3>" {{review.comment}} "</h3></p>
-       <p class="barCategories"><h4>Category:  {{review.category}}</h4></p>
-       <p class="barRating"><h4>Rating:  {{review.rating}}</h4></p>
-       <p class="barzName"><h3>{{review.name}}</h3></p>
-     </li>
-  </ul>
+    <button id="newComBtn" class="col-md-6 col-sm-12 col-lg-6 centered" ng-click="review = !review"><h4>add review.</h4></button>
 </div>
+
+<div class="row detail">
+  <form class="newComForm col-md-12 centered" ng-submit="comCtrl.addReview(newReview, google.getSingleBar.name)" ng-show="review" ng-app="comment">
+      <label class="col-md-12 centered">What did you think of this bar?</label>
+      <input class="col-md-8 col-sm-12 col-lg-8 centered" type="textarea" ng-model="newReview.comment" id="" size="300"></input>
+    <label class="col-md-12 centered">How would you rate it (1 = very poor, 5 = fucking awesome)?</label>
+    <select name="Rating" ng-model="newReview.rating" class="selects col-md-8 col-sm-12 col-lg-8 centered">
+      <option type="number" 1><h3>1</h3></option>
+      <option type="number" 2><h3>2</h3></option>
+      <option type="number" 3><h3>3</h3></option>
+      <option type="number" 4><h3>4</h3></option>
+      <option type="number" 5><h3>5</h3></option>
+    </select>
+    <label class="col-md-12 centered">How would you categorize this bar?</label>
+    <select class="selects col-md-8 col-sm-12 col-lg-8 centered" ng-model="newReview.category" name="Category" id="">
+      <option value="Swanky"><h3>Swanky</h3></option>
+      <option value="Regular"><h3>Regular</h3></option>
+      <option value="Fratty"><h3>Fratty</h3></option>
+      <option value="Dive"><h3>Dive</h3></option>
+    </select>
+    <button type="submit" id="newComSubmit" class="col-md-8 col-sm-12 col-lg-8 centered">Submit</button>
+    </form>
 </div>
+
+<div class="row detail">
+    <ul class="reviewList" ng-controller="CommentCtrl as comCtrl">
+       <li class="reviews col-md-8 col-sm-12 centered" ng-repeat="review in comCtrl.comments | filter: {name: google.getSingleBar.name} : true">
+         <p class="barCommentz"><h3>" {{review.comment}} "</h3></p>
+         <p class="barCategories"><h5>Category:  {{review.category}}</h5></p>
+         <p class="barRating"><h5>Rating:  {{review.rating}}</h5></p>
+       </li>
+    </ul>
+  </div>

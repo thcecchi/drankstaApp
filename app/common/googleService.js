@@ -23,29 +23,35 @@
 
         var request = {
           location: latlng,
-          radius: '500',
+          radius: '50',
           query: 'bar'
         };
+
 
         service = new google.maps.places
           .PlacesService(document.getElementById('main').appendChild(document.createElement('div')));
         service.textSearch(request, callback);
+
       }
 
       var callback = function (results, status) {
+
+
         if (status == google.maps.places.PlacesServiceStatus.OK) {
           for (var i = 0; i < results.length; i++) {
             var place = results[i];
             placeArr.push(place)
             // createMarker(results[i]);
-            console.log(results[i])
+            console.log(place)
           }
+
         }
       }
 
       var readArr = function() {
         return placeArr
       }
+
 
       var readOneArr = function(index) {
         return placeArr[index]
@@ -57,6 +63,7 @@
         getAllBarz: readArr,
         getOneBar: readOneArr
       }
+
     });
 
 })();

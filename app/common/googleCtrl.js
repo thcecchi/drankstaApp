@@ -5,7 +5,11 @@
 
       var goog = this;
 
+      goog.placeArr = GoogleService.barArr
+
       goog.allBars = GoogleService.getAllBarz();
+
+      $scope.getTheBars = GoogleService.getAllBarz();
 
       goog.getSingleBar = GoogleService.getOneBar($routeParams.barIndex);
 
@@ -20,12 +24,19 @@
                     console.log(locCoords);
                     goog.locationInput($scope.location)
                 }
+
             };
+
 
       goog.locationInput = function (newLocation) {
         var locName = newLocation
         console.log(locName)
         GoogleService.getBarInfo(locName)
+      }
+
+      $scope.renderBars = function() {
+        goog.allBars
+        console.log(goog.placeArr)
       }
 
   });

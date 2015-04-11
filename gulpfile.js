@@ -16,8 +16,7 @@ gulp.task('styles', function () {
       precision: 10
     }))
     .pipe($.autoprefixer('last 1 version'))
-    // .pipe(gulp.dest('.tmp/styles'));
-    .pipe(gulp.dest('app/styles'));
+    .pipe(gulp.dest('.tmp/styles'));
 });
 
 gulp.task('html', ['styles'], function () {
@@ -83,7 +82,7 @@ gulp.task('serve', ['connect', 'styles'], function () {
 gulp.task('wiredep', function () {
   var wiredep = require('wiredep').stream;
 
-  gulp.src('app/styles/*.scss')
+  gulp.src('app/styles/**/*.scss')
     .pipe(wiredep({directory: 'bower_components'}))
     .pipe(gulp.dest('app/styles'));
 
@@ -101,6 +100,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
   gulp.watch([
     'app/*.html',
     '.tmp/styles/**/*.css',
+    'app/styles/**/*.css',
     'app/scripts/**/*.js',
     'app/images/**/*'
   ]).on('change', $.livereload.changed);
