@@ -1,0 +1,12 @@
+<div class="barLists">
+<article>
+  <div class="barz"  ng-repeat="bars in google.allBars"><a href="#/detail/{{$index}}">
+    <p>{{bars.name}}</p>
+      <img ng-src="{{bars.photo}}" alt="">
+    <p>Address: {{bars.address}} </p>
+  </a>
+    <!-- <button ng-click="userCtrl.buySuperSox(sox)">See More? </button> -->
+    <!--   <button ng-click="mainCtrl.editSuperHero(hero)">Edit Hero</button> -->
+  </div>
+</article>
+</div>

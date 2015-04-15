@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+    <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="//use.typekit.net/bbi0ido.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+<!--     <script type="text/javascript"
+src="https://maps.googleapis.com/maps/api/js?v=3.0sensor=false&libraries=places&key=AIzaSyD7V33_45D7vdPHFNKEasnNYXvr16P1Li4">
+</script> -->
+
+    <title>Spout.</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body ng-app="dranksta">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <header>
+              <h1 class="siteTitle">spout.</h1>
+              <!-- <img class="chugefresh" src="chugefresh.png" alt=""> -->
+        </header>
+      </div>
+      <div class="col-md-4"></div>
+
+    </div>
+
+
+    <ng-view></ng-view>
+
+  </div>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places&key=AIzaSyD7V33_45D7vdPHFNKEasnNYXvr16P1Li4"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/lodash/dist/lodash.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+    <script src="bower_components/angular-img-fallback-master/angular.dcb-img-fallback.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js app.js -->
+        <script src="app.js"></script>
+        <script src="common/googleCtrl.js"></script>
+        <script src="common/googleService.js"></script>
+        <script src="common/directive.js"></script>
+        <script src="common/comments.js"></script>
+        <script src="common/CommentController.js"></script>
+        <script src="common/CommentService.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
