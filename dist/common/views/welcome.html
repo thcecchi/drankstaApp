@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row head">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <google-places location=location></google-places>
+
+      <!-- <form class="" action="/#">
+        <input type="submit" ng-click="doSearch()" id="searchBtn" class="btn btn-large btn-primary" value="Search">
+      </form> -->
+
+      <button ng-click="doSearch()" id="searchBtn" class="btn btn-large btn-primary">Search</button>
+
+      <!-- <button ng-click="renderBars()" id="searchBtn" class="btn btn-large btn-secondary">Search</button> -->
+
+    </div>
+    <!-- <div class="col-md-4"></div> -->
+
+  </div>
+
+  <div id='main'></div>
+  <div id='map'></div>
+
+
+<!-- google api rendered results -->
+<div class="results">
+ <div class="barz"  ng-repeat="bars in google.allBars">
+   <!-- <div ng-controller="CommentCtrl as comCtrl"> -->
+
+  <a href="#/detail/{{$index}}/">
+   <h1 class="barName">{{bars.name}}</h1>
+   <!-- <h3>{{bars.address}}</h3> -->
+   <!-- <div class="barStats">
+   <ul>
+     <li class="rating stat"><h3>Rating: </h3></li>
+     <li class="category stat"><h3>Category: </h3></li>
+   </ul>
+   </div> -->
+
+  </a>
+<!-- </div> -->
+ </div>
+</div>
+</div>
